@@ -1,0 +1,16 @@
+
+The const can be on either side of the data type so:
+
+“const int *” is same as “int const *”
+
+“const int * const” is same as “int const * const”
+
+int *ptr;           // ptr is pointer to int
+int const *ptr;     // ptr is pointer to const int
+int * const ptr;        // ptr is const pointer to int
+int const * const ptr;  // ptr is const pointer to const int
+int ** const ptr;       // ptr is const pointer to a pointer to an int
+int * const *ptr;       // ptr is pointer to a const pointer to an int
+int const **ptr;        // ptr is pointer to a pointer to a const int
+int * const * const ptr;    // ptr is const pointer to a const pointer to an int
+The basic rule is const applies to the thing left of it. If there is nothing on the left then it applies to the thing right of it.
